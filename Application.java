@@ -1,7 +1,17 @@
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Application{
+
+    public int[] getNumbers(int number){
+        Random rand = new Random();
+        int[] x= new int[number];
+        for (int i = 0; i < number; i++){
+            x[i] = rand.nextInt(101);
+        }
+        return x;
+    }
     public int findMin(int[] a){
         int min = Integer.MIN_VALUE;
         for (int i : a) {
