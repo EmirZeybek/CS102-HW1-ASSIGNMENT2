@@ -3,6 +3,29 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+// public class MethodE{
+//     int[] sayi;
+    
+//     public MethodE(int[] sayi){
+//         this.sayi = sayi;
+//     }
+
+//     public int sumEven(){
+//         int sum=0;
+//         for(int i=0; i<sayi.length; i=+2){
+//             sum = sum + sayi[i];
+//         }
+//         return sum;
+//     }
+
+//     public int sumOdd(){
+//         int sum=0;
+//         for(int i=1; i<sayi.length; i=+2){
+//             sum = sum + sayi[i];
+//         }
+//         return sum;
+//     }
+// }
 public class Application{
 
     public static int[] getNumbers(int number){
@@ -34,7 +57,21 @@ public class Application{
         return max;
     }
 
+    public static int sumEven(int[] arr){
+        int sum=0;
+        for(int i=0; i<arr.length; i=i+2){
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
 
+    public static int sumOdd(int[] arr ){
+        int sum=0;
+        for(int i=1; i<arr.length; i=i+2){
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
 
     public static int[] findDiffrence(int[]array){
         int sum=0;
@@ -55,29 +92,7 @@ public class Application{
 
 
     
-    public class MethodE{
-        int[] sayi;
-        
-        public MethodE(int[] sayi){
-            this.sayi = sayi;
-        }
-    
-        public int sumEven(){
-            int sum=0;
-            for(int i=0; i<sayi.length; i=+2){
-                sum = sum + sayi[i];
-            }
-            return sum;
-        }
-    
-        public int sumOdd(){
-            int sum=0;
-            for(int i=1; i<sayi.length; i=+2){
-                sum = sum + sayi[i];
-            }
-            return sum;
-        }
-    }
+   
 
 public static void main(String[] args) {
     
@@ -92,7 +107,7 @@ public static void main(String[] args) {
     int input = in.nextInt();
     int [] numbers = getNumbers(input);
     System.out.println();
-
+    
     while(!exit){
 
         
@@ -122,11 +137,11 @@ public static void main(String[] args) {
 
         }
         if(inpt == 5){
-            // System.out.println("Sum of the odd numbers: " + MethodE.sumOdd);
+             System.out.println("Sum of the odd numbers: " + sumOdd(numbers));
 
         }
         if(inpt == 6){
-            // System.out.println("Sum of the even numbers: " + MethodE.sumEven);
+             System.out.println("Sum of the even numbers: " + sumEven(numbers));
 
         }
         if(inpt == 7){
