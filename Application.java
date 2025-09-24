@@ -1,11 +1,11 @@
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Application{
 
-<<<<<<< Updated upstream
-    public int[] getNumbers(int number){
+    public static int[] getNumbers(int number){
         Random rand = new Random();
         int[] x= new int[number];
         for (int i = 0; i < number; i++){
@@ -13,11 +13,8 @@ public class Application{
         }
         return x;
     }
-=======
-
->>>>>>> Stashed changes
-    public int findMin(int[] a){
-        int min = Integer.MIN_VALUE;
+    public static int findMin(int[] a){
+        int min = Integer.MAX_VALUE;
         for (int i : a) {
             if( i < min ){
                 i = min;
@@ -27,8 +24,8 @@ public class Application{
     }
 
 
-    public int findMax(int[] a){
-        int max = Integer.MAX_VALUE;
+    public static int findMax(int[] a){
+        int max = Integer.MIN_VALUE;
         for (int i : a) {
             if( i > max ){
                 i = max;
@@ -39,7 +36,7 @@ public class Application{
 
 
 
-    public int[] findDiffrence(int[]array){
+    public static int[] findDiffrence(int[]array){
         int sum=0;
         int[] avarageDiffrence;  
         avarageDiffrence=new int[array.length];
@@ -89,8 +86,11 @@ public static void main(String[] args) {
 
     System.out.println("Welcome to the program.");
     System.out.print("Write the size of the array: ");
+    
 
+        
     int input = in.nextInt();
+    int [] numbers = getNumbers(input);
     System.out.println();
 
     while(!exit){
@@ -107,9 +107,8 @@ public static void main(String[] args) {
 
         System.out.print("Select option: ");
         int inpt = in.nextInt();
-
         if(inpt == 1){
-            
+            System.out.println(Arrays.toString(numbers));
 
         }
         if(inpt == 2){
@@ -119,15 +118,15 @@ public static void main(String[] args) {
             System.out.println("Maximum integer: " + findMax(numbers));
         }
         if(inpt == 4){
-            System.out.println("The avarage diffrence is: " + findDiffrence(numbers));
+            System.out.println("The avarage diffrence is: " + Arrays.toString(findDiffrence(numbers)));
 
         }
         if(inpt == 5){
-            System.out.println("Sum of the odd numbers: " + MethodE.sumOdd);
+            // System.out.println("Sum of the odd numbers: " + MethodE.sumOdd);
 
         }
         if(inpt == 6){
-            System.out.println("Sum of the even numbers: " + MethodE.sumEven);
+            // System.out.println("Sum of the even numbers: " + MethodE.sumEven);
 
         }
         if(inpt == 7){
