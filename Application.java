@@ -21,6 +21,19 @@ public class Application{
         }
         return max;
     }
+    public int[] findDiffrence(int[]array){
+        int sum=0;
+        int[] avarageDiffrence;  
+        avarageDiffrence=new int[array.length];
+        for(int x=0;x <array.length;x++ ) {
+            sum+=array[x]; 
+        }
+        int avarage=sum/array.length; 
+    for(int z=0;z<array.length;z++){
+        avarageDiffrence[z]= array[z]-avarage;
+    }
+    return avarageDiffrence;
+    }
 
 public static void main(String[] args) {
     
@@ -59,7 +72,7 @@ public static void main(String[] args) {
             System.out.println("Maximum integer: " + findMax(numbers));
         }
         if(inpt == 4){
-            
+            System.out.println("The avarage diffrence is: " + findDiffrence(numbers));
 
         }
         if(inpt == 5){
