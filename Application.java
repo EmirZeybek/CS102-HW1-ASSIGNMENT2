@@ -2,7 +2,25 @@
 import java.util.Scanner;
 
 public class Application{
+    public int findMin(int[] a){
+        int min = Integer.MIN_VALUE;
+        for (int i : a) {
+            if( i < min ){
+                i = min;
+            }
+        }
+        return min;
+    }
 
+    public int findMax(int[] a){
+        int max = Integer.MAX_VALUE;
+        for (int i : a) {
+            if( i > max ){
+                i = max;
+            }
+        }
+        return max;
+    }
 
 public static void main(String[] args) {
     
@@ -35,12 +53,10 @@ public static void main(String[] args) {
 
         }
         if(inpt == 2){
-            
-
+            System.out.println("Minimum integer: " + findMin(numbers));
         }
         if(inpt == 3){
-            
-
+            System.out.println("Maximum integer: " + findMax(numbers));
         }
         if(inpt == 4){
             
