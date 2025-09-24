@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Application{
 
+<<<<<<< Updated upstream
     public int[] getNumbers(int number){
         Random rand = new Random();
         int[] x= new int[number];
@@ -12,6 +13,9 @@ public class Application{
         }
         return x;
     }
+=======
+
+>>>>>>> Stashed changes
     public int findMin(int[] a){
         int min = Integer.MIN_VALUE;
         for (int i : a) {
@@ -22,6 +26,7 @@ public class Application{
         return min;
     }
 
+
     public int findMax(int[] a){
         int max = Integer.MAX_VALUE;
         for (int i : a) {
@@ -31,6 +36,9 @@ public class Application{
         }
         return max;
     }
+
+
+
     public int[] findDiffrence(int[]array){
         int sum=0;
         int[] avarageDiffrence;  
@@ -39,12 +47,17 @@ public class Application{
             sum+=array[x]; 
         }
         int avarage=sum/array.length; 
-    for(int z=0;z<array.length;z++){
+
+        for(int z=0;z<array.length;z++){
         avarageDiffrence[z]= array[z]-avarage;
-    }
-    return avarageDiffrence;
+        }
+
+        
+        return avarageDiffrence;
     }
 
+
+    
     public class MethodE{
         int[] sayi;
         
