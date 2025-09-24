@@ -35,6 +35,30 @@ public class Application{
     return avarageDiffrence;
     }
 
+    public class MethodE{
+        int[] sayi;
+        
+        public MethodE(int[] sayi){
+            this.sayi = sayi;
+        }
+    
+        public int sumEven(){
+            int sum=0;
+            for(int i=0; i<sayi.length; i=+2){
+                sum = sum + sayi[i];
+            }
+            return sum;
+        }
+    
+        public int sumOdd(){
+            int sum=0;
+            for(int i=1; i<sayi.length; i=+2){
+                sum = sum + sayi[i];
+            }
+            return sum;
+        }
+    }
+
 public static void main(String[] args) {
     
     Scanner in = new Scanner(System.in);
@@ -76,11 +100,11 @@ public static void main(String[] args) {
 
         }
         if(inpt == 5){
-            
+            System.out.println("Sum of the odd numbers: " + MethodE.sumOdd);
 
         }
         if(inpt == 6){
-            
+            System.out.println("Sum of the even numbers: " + MethodE.sumEven);
 
         }
         if(inpt == 7){
